@@ -22,3 +22,13 @@ def obtener_clima(ciudad):
 # 👉 Entrada del usuario
 ciudad = input("📌 Ingresá el nombre de una ciudad: ").strip()
 obtener_clima(ciudad)
+
+'''
+
+📌 Ingresá el nombre de una ciudad: rio negro
+
+📍 Ciudad: Rio Negro
+🌡️ Temperatura: 17.85 °C
+☁️ Condición: nubes
+💨 Viento: 0.75 m/s
+'''
