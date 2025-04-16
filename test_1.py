@@ -2,7 +2,8 @@ import requests
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  # Carga las variables del archivo .env
+# Carga la API key desde el archivo .env
+load_dotenv()
 
 def obtener_clima(ciudad):
     api_key = os.getenv("API_KEY")
@@ -11,14 +12,13 @@ def obtener_clima(ciudad):
     datos = respuesta.json()
 
     if respuesta.status_code == 200:
-        print(f"📍 Ciudad: {datos['name']}")
+        print(f"\n📍 Ciudad: {datos['name']}")
         print(f"🌡️ Temperatura: {datos['main']['temp']} °C")
         print(f"☁️ Condición: {datos['weather'][0]['description']}")
         print(f"💨 Viento: {datos['wind']['speed']} m/s")
     else:
-        print("Error al obtener los datos del clima. Verifica la ciudad o tu clave API.")
+        print("\n❌ Error al obtener los datos del clima. Verifica la ciudad o tu clave API.")
 
-# 🌎 Ciudad deseada
-ciudad = "Buenos Aires"
+# 👉 Entrada del usuario
+ciudad = input("📌 Ingresá el nombre de una ciudad: ").strip()
 obtener_clima(ciudad)
-
