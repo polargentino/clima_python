@@ -222,6 +222,71 @@ requests==2.32.3
 urllib3==2.4.0
 ---------------------------------------------------------
 
+🚀 3 formas de llevar tu app de clima al siguiente nivel:
+
+🔹 OPCIÓN 1: Versión con interfaz gráfica (GUI) usando tkinter 🖼️
+
+Ideal si querés mostrar algo visual sin meterte todavía en desarrollo web.
+
+Ventajas:
+
+100% Python.
+
+Fácil de mostrar en entrevistas.
+
+Funciona como app de escritorio.
+
+🔹 OPCIÓN 2: Versión web simple con Flask 🌐
+Si te gustaría mostrar que podés crear una mini app web:
+
+Ventajas:
+
+Podés subirla a la nube (Render, Replit, etc.).
+
+Aprendés fundamentos de desarrollo web y APIs.
+
+¡Muchos reclutadores valoran que sepas Flask!
+
+🔹 OPCIÓN 3: Envío automático del clima por correo 📧
+Como mini bot diario que te avisa el clima de tu ciudad.
+
+Ventajas:
+
+Muestra automatización real.
+
+Podés correrlo con cron y que se envíe solo todos los días.
+
+Usás smtplib o incluso Yagmail para enviar desde Gmail.
+
+**✅ ¿Cuál querés hacer primero?
+
+1- GUI con tkinter: 🧰 Requisitos
+Solo necesitás tener esto en tu entorno virtual:
+
+
+pip install requests
+
+tkinter ya viene con Python, así que no hace falta instalarlo 🧙‍♂️
+
+**ModuleNotFoundError: No module named '_tkinter'
+Significa que tu instalación de Python no tiene soporte para tkinter. En Kali (y otros derivados de Debian), tkinter no viene preinstalado.
+
+sudo apt update
+sudo apt install python3-tk
+
+
+
+
+
+2- Web con Flask
+
+3- Bot que envía clima por correo
+
+
+
+
+
+
 
 
 
