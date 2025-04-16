@@ -319,6 +319,26 @@ ChatGPT Plus
 
 ✅ webbrowser: para abrir el mapa generado en tu navegador.
 
+**¡Excelente, Pol! 🔥 Vamos a llevar esta app a otro nivel agregando un mapa interactivo 🌍 con folium, que se abrirá automáticamente en el navegador con la ubicación de la ciudad buscada. Va a quedar profesional y visualmente impactante. 💪
+
+🔧 Requisitos
+Antes de escribir el código, instalá folium:
+
+
+pip install folium
+
+Y actualizá el requirements.txt:
+
+
+pip freeze > requirements.txt
+
+🧠 ¿Qué hará ahora la app?
+Cuando busques una ciudad:
+
+Se muestra el clima (como ya lo hace).
+
+Además, abre un mapa en el navegador marcando esa ubicación. 🗺️
+
 
 
 
