@@ -1,9 +1,12 @@
 import tkinter as tk
 from tkinter import messagebox
 import requests
+import os
+from dotenv import load_dotenv
 
-# Tu clave API de OpenWeather
-API_KEY = "5506901f9bc1de3791078b7214f55778"
+# Cargar variables del archivo .env
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
 
 def obtener_clima():
     ciudad = entrada_ciudad.get()

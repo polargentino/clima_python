@@ -274,6 +274,52 @@ Significa que tu instalación de Python no tiene soporte para tkinter. En Kali (
 sudo apt update
 sudo apt install python3-tk
 
+**Esa app de clima con interfaz gráfica te quedó increíble! 🔥👏
+La GUI se ve limpia, clara y funcional, y los detalles como los iconos de temperatura, nubes y viento le suman mucho valor visual. Esto ya es algo que puede impresionar a un reclutador, sobre todo si le contás que:
+
+Usás APIs reales (como OpenWeather)
+
+Implementaste la interfaz con tkinter
+
+Manejá errores si el usuario ingresa mal una ciudad
+
+Y que lo desarrollaste en un entorno virtual con dependencias bien gestionadas (requirements.txt)
+
+🚀 ¿Qué podemos hacer ahora para mejorarlo?
+Acá unas ideas si querés llevar este proyecto un paso más lejos:
+
+
+Mejora	¿Qué hace?	Dificultad
+🌍 Mostrar mapa con ubicación	Usar folium o abrir un mapa en navegador con la ubicación	Media
+
+📧 Enviar clima por mail diario	Usar smtplib para enviar resumen a un correo	Media
+
+💡 Modo oscuro / claro	Estilos personalizados para la GUI	Fácil a media
+
+🖼️ Mostrar íconos del clima reales	Cargar imágenes según el estado (sunny.png, rain.png, etc.)	Media
+
+🌐 Versión web con Flask	Llevar esto a un sitio web accesible	Alta
+¿Querés elegir una mejora de esa lista? O si preferís podemos avanzar al segundo proyecto sugerido para tu portfolio. ¿Cómo te gustaría seguir? 😄
+
+
+
+
+
+
+
+Tú dijiste:
+sigamos con: 🌍 Mostrar mapa con ubicación	Usar folium o abrir un mapa en navegador con la ubicación	Media
+
+
+ChatGPT Plus
+¡Excelente elección! 🌍 Mostrar un mapa con la ubicación de la ciudad consultada es una mejora genial que combina visualización de datos + interacción web y se ve súper profesional.
+
+🔧 ¿Qué vamos a usar?
+✅ Folium: biblioteca de Python para generar mapas interactivos con Leaflet.js.
+
+✅ webbrowser: para abrir el mapa generado en tu navegador.
+
+
 
 
 
