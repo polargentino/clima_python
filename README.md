@@ -74,7 +74,10 @@ pip install requests
 
 Y luego corrés tu script como siempre:
 
-python clima.py
+python test.py
+
+![Desde terminal linux](assets/test_1.png)
+
 
 ¿Querés que te genere un requirements.txt para este 
 script?
@@ -111,8 +114,7 @@ pip install python-dotenv
 
 *📄 Archivo .gitignore recomendado para proyectos Python con venv:
 gitignore
-Copiar
-Editar
+
 # Entorno virtual
 venv/
 ENV/
@@ -226,6 +228,7 @@ urllib3==2.4.0
 
 🔹 OPCIÓN 1: Versión con interfaz gráfica (GUI) usando tkinter 🖼️
 
+
 Ideal si querés mostrar algo visual sin meterte todavía en desarrollo web.
 
 Ventajas:
@@ -235,6 +238,11 @@ Ventajas:
 Fácil de mostrar en entrevistas.
 
 Funciona como app de escritorio.
+
+
+
+![Texto alternativo](assets/GUI_tkinder.png)
+
 
 🔹 OPCIÓN 2: Versión web simple con Flask 🌐
 Si te gustaría mostrar que podés crear una mini app web:
@@ -339,16 +347,76 @@ Se muestra el clima (como ya lo hace).
 
 Además, abre un mapa en el navegador marcando esa ubicación. 🗺️
 
-
-
-
-
+----------------------------------------------------------------------
 
 2- Web con Flask
 
 3- Bot que envía clima por correo
+-----------------------------------------------------------------------
+
+**¡Excelente, Pol! 🔥 Ya estás dominando la app. Vamos a implementar la función de enviar el clima por email diariamente usando smtplib. 📧
+
+💡 ¿Qué vas a lograr?
+Vas a poder:
+
+Consultar el clima como siempre ✅
+
+Y además enviar esa info a un correo electrónico con un solo clic 💥
+
+📦 Requisitos
+Añadí estas variables a tu archivo .env:
 
 
+EMAIL_USER=tuemail@gmail.com
+EMAIL_PASS=tu_clave_app_o_password
+DESTINATARIO=correo@destino.com
+
+⚠️ Si usás Gmail, necesitás crear una clave de aplicación en lugar de tu contraseña normal. Te explico si lo necesitás.
+
+Instalá secure-smtplib (ya viene con Python moderno, pero por si acaso):
+
+
+pip install secure-smtplib
+
+**¡Perfecto que me lo mostraste! 📸 Ese error es completamente normal cuando usás Gmail para enviar correos desde apps como esta.
+
+## 🖼️ Vista previa de la app
+
+![Clima App GUI](assets/mensaje%20de%20error.png)
+
+
+🛡️ ¿Qué significa este error?
+Tu cuenta de Gmail está protegida por autenticación en dos pasos (2FA), y por eso no permite usar tu contraseña normal para acceder desde otras apps.
+
+Necesitás crear una "Contraseña de aplicación" (App password) específica para que tu script pueda enviar correos.
+
+✅ Cómo solucionarlo (crear una clave de aplicación en Gmail)
+Paso a paso:
+📲 Asegurate de tener activada la verificación en dos pasos:
+https://myaccount.google.com/security
+➤ Busca la sección "Verificación en dos pasos" y activala si no lo hiciste aún.
+
+🔑 Luego, vas a ver una nueva opción: "Contraseñas de aplicaciones"
+Link directo: https://myaccount.google.com/apppasswords
+
+Ahí hacé lo siguiente:
+
+En "Seleccionar app" elegí "Correo"
+
+En "Seleccionar dispositivo" elegí "Otro" y escribí algo como "Clima App" (o lo que quieras)
+
+Google te dará una contraseña de 16 caracteres, como por ejemplo:
+abcd efgh ijkl mnop
+
+📋 Copiá esa contraseña y ponela en tu archivo .env así:
+
+
+EMAIL_USER=tuemail@gmail.com
+EMAIL_PASS=abcd efgh ijkl mnop
+DESTINATARIO=correo@destino.com
+✅ ¡Listo! Ya podés enviar correos desde tu app sin problemas.
+
+![Mapa de ubicación](assets/app_clima_email.png)
 
 
 
