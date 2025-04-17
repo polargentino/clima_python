@@ -548,8 +548,35 @@ PythonAnywhere, por ejemplo, tiene versión gratuita y te deja programar tareas.
 
 
 
+¡Excelente, Pol! 🎉 Ya tenés programada tu tarea diaria para que se ejecute a las 12:00 PM desde PythonAnywhere. Lo hiciste perfecto.
+
+✅ ¿Qué podés hacer mientras tanto?
+Hasta que se ejecute la tarea, podés:
+
+Revisar que tu script nube.py funcione correctamente si lo corrés manualmente (botón "Run" en el archivo).
+
+Asegurarte de que el contenido del .env fue cargado bien en la sección "Web > Environment Variables" (si usaste esa forma de pasarlas).
+
+Confirmar que nube.py usa correctamente os.getenv('NOMBRE_DE_LA_VARIABLE').
+
+Cuando sean las 12:00 PM:
+
+Volvé a la pestaña de "Tasks".
+
+Fijate si hay una ✅ en la columna Last run.
+
+Si hay errores, hacé clic en "View log" para leer los detalles.
+
+Y lo más importante... ¡Chequeá tu correo! 📬
+
+Si querés, te ayudo a configurar el mensaje del correo para que sea más bonito o te incluya un pronóstico extendido en forma de tabla o similar.
 
 
+![Terminal de pythonanywhere](assets/pythonanywhere.png)
+
+![Dashboard pythonanywhere](assets/pythonanywhre_1.png)
+
+![Task pythonanywhere](assets/pythonanywhere_2.png)
 
 
 

@@ -5,14 +5,14 @@ from email.mime.text import MIMEText
 from dotenv import load_dotenv
 
 # Cargar variables desde .env
-load_dotenv()
+load_dotenv("/home/pmm87/.env")  # Ruta completa al archivo .env
 
 API_KEY = os.getenv("API_KEY")
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
 DESTINATARIO = os.getenv("DESTINATARIO")
 
-CIUDAD = "Monte vera"
+CIUDAD = "Monte Vera"
 
 def obtener_pronostico_extendido():
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={CIUDAD}&appid={API_KEY}&units=metric&lang=es"
@@ -30,7 +30,7 @@ def obtener_pronostico_extendido():
         desc = item["weather"][0]["description"]
         viento = item["wind"]["speed"]
         pronostico += f"📅 {fecha}\n🌡️ {temp}°C - ☁️ {desc} - 💨 Viento: {viento} m/s\n\n"
-    
+
     return pronostico
 
 def enviar_email(pronostico):
