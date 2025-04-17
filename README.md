@@ -418,6 +418,126 @@ DESTINATARIO=correo@destino.com
 
 ![Mapa de ubicación](assets/app_clima_email.png)
 
+----------------------------------------------------------
+
+*¡Excelente decisión, Pol! Automatizar el envío diario con cron le da ese toque pro de DevOps que le encanta a los reclutadores. Vamos paso a paso:
+
+🔁 1. Crear un script Python separado para enviar el clima
+Guardá este archivo como enviar_clima.py en tu proyecto:
+
+🛠️ 2. Hacer ejecutable el script (opcional)
+
+chmod +x enviar_clima.py
+
+
+⚠️ Revisá que la ruta de python3 y del script sea la correcta. Podés encontrar la ruta con:
+
+which python3
+
+/home/pol/Escritorio/clima_python/VENV/bin/python3
+
+🕓 3. Editar el crontab
+
+Abrí tu cron con:
+
+crontab -e
+
+
+**✅ Editar crontab desde la terminal de Kali usando sudo su
+Abrí tu terminal normal (la de Kali, no la de VS Code).
+
+Convertite en root con:
+
+
+sudo su
+
+Una vez como root, ejecutá:
+
+
+crontab -e -u pol
+
+Esto abrirá el crontab del usuario pol.
+
+🕘 Pegá esta línea para que se envíe el clima todos los días a las 9 AM:
+
+0 9 * * * /home/pol/Escritorio/clima_python/VENV/bin/python3 /home/pol/Escritorio/clima_python/enviar_clima.py >> /home/pol/Escritorio/clima_python/log_envio.txt 2>&1
+
+Este cron:
+---------
+Se ejecuta a las 09:00 AM todos los días.
+
+Usa el Python de tu entorno virtual.
+
+Guarda la salida en un log para que puedas ver si algo falla: log_envio.txt.
+
+📌 ¿Cómo saber si está funcionando?
+Después de que pase la hora programada (por ejemplo, al día siguiente a las 9:01), podés revisar:
+
+
+cat /home/pol/Escritorio/clima_python/log_envio.txt
+
+¿Querés probarlo ahora mismo ejecutando el cron manualmente? También se puede 😄
+
+¡Excelente, Pol! 🎉 Si te llegó el email y el archivo log_envio.txt está vacío, eso es una buena señal. Significa que:
+
+✅ El script se ejecutó sin errores.
+✅ No hubo mensajes de advertencia ni fallos.
+✅ Todo salió tan bien que no había nada que registrar en el log.
+
+¿Qué sigue ahora?
+Ya que confirmamos que el script funciona fuera de cron, podemos pasar al siguiente paso:
+
+🔄 Configurar cron (modo persistente)
+Como cron te da problemas con permisos y estás usando Kali en modo sin contraseña root (por defecto), te propongo una alternativa para dejarlo funcionando sin sudo ni root, usando tu sesión de usuario.
+
+✅ Crear un cronjob local
+Salí del entorno virtual (si querés):
+
+
+deactivate
+
+Entrá a editar tu crontab:
+
+
+crontab -e
+
+Si no te deja por los permisos, ejecutá:
+
+
+EDITOR=nano crontab -e
+
+Y agregá esta línea para que se ejecute todos los días a las 8:00 AM:
+
+
+0 8 * * * /home/pol/Escritorio/clima_python/VENV/bin/python3 /home/pol/Escritorio/clima_python/enviar_clima.py >> /home/pol/Escritorio/clima_python/log_envio.txt 2>&1
+
+Podés cambiar la hora para probar (por ejemplo, cada minuto: * * * * * para testear).
+
+⚠️ Si crontab sigue sin funcionar
+Podemos usar un script Python + while loop como alternativa temporal a cron (como un watcher). Pero primero probemos crontab -e.
+
+**❓ ¿Se enviarán los emails si la PC está apagada?
+👉 No, si la computadora está apagada, el cron no puede ejecutar el script porque cron depende del sistema operativo corriendo. Es como querer que te suene la alarma del celular cuando está apagado: no puede.
+
+🔄 ¿Qué podés hacer para solucionarlo?
+Opción 1: Tener la PC encendida a esa hora
+La más simple.
+
+Asegurate de que no esté suspendida ni hibernando.
+
+Opción 2: Usar una Raspberry Pi o servidor que esté siempre encendido
+Súper útil para automatizaciones 24/7.
+
+Cron funcionaría todos los días a la hora indicada.
+
+Opción 3: Usar un servicio en la nube (como GitHub Actions, PythonAnywhere o Replit)
+Te permiten ejecutar scripts automáticamente aunque tu PC esté apagada.
+
+PythonAnywhere, por ejemplo, tiene versión gratuita y te deja programar tareas.
+
+
+
+
 
 
 
