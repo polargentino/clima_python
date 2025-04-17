@@ -419,11 +419,14 @@ DESTINATARIO=correo@destino.com
 ![Mapa de ubicación](assets/app_clima_email.png)
 
 ----------------------------------------------------------
+![Imagen del logo](assets/thunderbird.png)
 
 *¡Excelente decisión, Pol! Automatizar el envío diario con cron le da ese toque pro de DevOps que le encanta a los reclutadores. Vamos paso a paso:
 
 🔁 1. Crear un script Python separado para enviar el clima
 Guardá este archivo como enviar_clima.py en tu proyecto:
+
+![email](assets/email.png)
 
 🛠️ 2. Hacer ejecutable el script (opcional)
 
@@ -448,6 +451,7 @@ Abrí tu terminal normal (la de Kali, no la de VS Code).
 
 Convertite en root con:
 
+![Terminal linux](assets/cron_sudo_su.png)
 
 sudo su
 
@@ -463,7 +467,7 @@ Esto abrirá el crontab del usuario pol.
 0 9 * * * /home/pol/Escritorio/clima_python/VENV/bin/python3 /home/pol/Escritorio/clima_python/enviar_clima.py >> /home/pol/Escritorio/clima_python/log_envio.txt 2>&1
 
 Este cron:
----------
+
 Se ejecuta a las 09:00 AM todos los días.
 
 Usa el Python de tu entorno virtual.
@@ -513,6 +517,9 @@ Y agregá esta línea para que se ejecute todos los días a las 8:00 AM:
 
 Podés cambiar la hora para probar (por ejemplo, cada minuto: * * * * * para testear).
 
+![Terminal linux](assets/cron_terminal_linux.png)
+
+
 ⚠️ Si crontab sigue sin funcionar
 Podemos usar un script Python + while loop como alternativa temporal a cron (como un watcher). Pero primero probemos crontab -e.
 
@@ -534,6 +541,10 @@ Opción 3: Usar un servicio en la nube (como GitHub Actions, PythonAnywhere o Re
 Te permiten ejecutar scripts automáticamente aunque tu PC esté apagada.
 
 PythonAnywhere, por ejemplo, tiene versión gratuita y te deja programar tareas.
+
+
+
+![Terminal de VSC](assets/pronostico_extendido.png)
 
 
 
