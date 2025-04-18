@@ -64,7 +64,8 @@ Se implementó una GUI usando `tkinter` para hacer la app más accesible a usuar
 Se implementó una ventana de error que avisa cuando la API Key es inválida o no hay conexión a internet.
 
 ### ⚠️ Error de conexión o API inválida
-![Mensaje de error](assets/mensaje de error.png)
+
+![Mensaje de error](assets/mensaje%20de%20error.png)
 
 ---
 
