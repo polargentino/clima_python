@@ -1,6 +1,6 @@
 # ⛅ Aplicación de Clima con Python + Email + Cron + GUI
-
-Este proyecto fue desarrollado como parte del curso de QA en **XQAcademy / Fundación Santex**. Se trata de una aplicación escrita en Python que permite obtener el clima actual y el pronóstico extendido, mostrarlo en una interfaz gráfica, enviarlo por correo electrónico y automatizar el envío con `cron`.
+☁️ App Clima + Email Automático con Python
+⚡ Este proyecto nace de la pasión por aprender, una computadora reciclada y la voluntad de crear soluciones reales con Python. Se trata de una aplicación escrita en Python que permite obtener el clima actual y el pronóstico extendido, mostrarlo en una interfaz gráfica, enviarlo por correo electrónico y automatizar el envío con `cron`.
 
 ## 🔧 Requisitos
 
@@ -94,7 +94,14 @@ Finalmente, la app fue subida a [PythonAnywhere](https://www.pythonanywhere.com/
 
 ## 🙌 Autor
 
-Proyecto desarrollado por un estudiante de QA en **XQAcademy | Fundación Santex**
+🙌 Autor
+Este proyecto fue desarrollado en modo autodidacta, con la ayuda de ChatGPT, usando una notebook de bajos recursos rescatada de una caja de chatarra y revivida con Kali Linux.
+
+Forma parte de un recorrido de aprendizaje en programación y automatización con Python, complementado con cursos de Kaggle y Alura LATAM.
+
+También se desarrollaron otros proyectos de Data Science en Python, siguiendo desafíos de Kaggle y guías de aprendizaje en español, siempre con el objetivo de crecer y generar nuevas oportunidades.
+
+
 
 ---
 
