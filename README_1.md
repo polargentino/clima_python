@@ -149,7 +149,7 @@ Subida a Render o Replit como versión web de la app.
 ---
 
 ## 🎓 Autor
-**Pol** – [GitHub](https://github.com/tu-usuario)
+**Pol** – [GitHub](https://github.com/polargentino)
 
 ---
 
