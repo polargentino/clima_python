@@ -95,7 +95,7 @@ Finalmente, la app fue subida a [PythonAnywhere](https://www.pythonanywhere.com/
 
 ## 🙌 Autor
 
-🙌 Autor
+🙌 Autor: Pablo Matías Monsalvo 
 Este proyecto fue desarrollado en modo autodidacta, con la ayuda de ChatGPT, usando una notebook de bajos recursos rescatada de una caja de chatarra y revivida con Kali Linux.
 
 Forma parte de un recorrido de aprendizaje en programación y automatización con Python, complementado con cursos de Kaggle y Alura LATAM.
