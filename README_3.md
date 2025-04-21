@@ -109,3 +109,9 @@ También se desarrollaron otros proyectos de Data Science en Python, siguiendo d
 ## 🧾 Licencia
 
 MIT License
+
+# Mejoras con Flask
+![app.py](assets/flask_1.png)
+
+## Más mejora...
+![app_1](assets/flask_2.png)
