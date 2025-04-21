@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta el clima</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Consulta el clima</h1>
+        <h3>Por Monsalvo Pol</h3>
+
+        <form method="POST">
+            <input type="text" name="ciudad" placeholder="Ingresa una ciudad" required>
+            <div class="btn-group">
+                <button type="submit" name="accion" value="ver">Ver clima</button>
+                <button type="submit" name="accion" value="email">Enviar por email</button>
+            </div>
+        </form>
+
+        {% if clima %}
+            <div class="resultado">
+                <h2>{{ clima.ciudad }}, {{ clima.pais }}</h2>
+                <h1>{{ clima.temp }}°C</h1>
+                <p><em>{{ clima.descripcion|capitalize }}</em></p>
+                <p>Sensación térmica: {{ clima.sensacion }}°C</p>
+                <p>Humedad: {{ clima.humedad }}%</p>
+                <p>Viento: {{ clima.viento }} m/s</p>
+                <img src="http://openweathermap.org/img/wn/{{ clima.icono }}@2x.png" alt="icono del clima">
+            </div>
+        {% endif %}
+
+        {% if enviado %}
+            <div class="alerta">
+                📧 ¡Clima enviado exitosamente por email!
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
