@@ -117,3 +117,5 @@ MIT License
 ![app_1](assets/flask_2.png)
 
 *Seguir con las mejoras
+**Agregarle más gráfico profesionales
+
