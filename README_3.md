@@ -118,4 +118,4 @@ MIT License
 
 *Seguir con las mejoras
 **Agregarle más gráfico profesionales
-
+05/05/2025
